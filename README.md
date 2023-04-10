@@ -16,6 +16,8 @@ curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
+  
+  wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo apt-key add -
 
 sudo apt-get update
 
